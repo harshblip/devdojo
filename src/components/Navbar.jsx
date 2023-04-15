@@ -38,11 +38,13 @@ const Navbar = ({ user, currentPath }) => {
                     />
                   </Link>
                   <Link href="/home">
+
                     <img
                       className="hidden logo lg:block h-14 w-auto cursor-pointer"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
                       alt="Driwwwle"
                     />
+                    
                   </Link>
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
