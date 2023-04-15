@@ -35,8 +35,6 @@ const Navbar = ({ user, currentPath }) => {
                       className="block rounded-full lg:hidden h-10 w-auto cursor-pointer"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
                       alt="Driwwwle"
-                      height = {10}
-                      width = {10}
                     />
                   </Link>
                   <Link href="/home">
