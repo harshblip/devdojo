@@ -18,6 +18,12 @@
   }
 }
 
+.logo {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   font-family: 'Satoshi';

@@ -12,7 +12,7 @@ import {
 
 import Search from './Search';
 
-import { logoutUser } from '../utils/auth';
+// import { logoutUser } from '../utils/auth';
 
 const navigation = [
   { name: 'Home', href: '/home' },
@@ -32,22 +32,24 @@ const Navbar = ({ user, currentPath }) => {
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/home">
                     <img
-                      className="block lg:hidden h-10 w-auto cursor-pointer"
-                      src="/logo.svg"
+                      className="block rounded-full lg:hidden h-10 w-auto cursor-pointer"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
                       alt="Driwwwle"
+                      height = {10}
+                      width = {10}
                     />
                   </Link>
                   <Link href="/home">
                     <img
-                      className="hidden lg:block h-14 w-auto cursor-pointer"
-                      src="/logo-full.png"
+                      className="hidden logo lg:block h-14 w-auto cursor-pointer"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
                       alt="Driwwwle"
                     />
                   </Link>
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
                   {navigation.map((link) => (
-                    <Link key={link.name} href={link.href}>
+                    <Link key={link.name} href={link.href} legacyBehavior>
                       <a
                         className={`${
                           currentPath === link.href
@@ -123,14 +125,14 @@ const Navbar = ({ user, currentPath }) => {
                               className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
                             >
                               <Menu.Item>
-                                <Link href={`/${user.username}`}>
+                                <Link href={`/${user.username}`} legacyBehavior>
                                   <a className="block hover:bg-gray-100 px-4 py-2 text-sm text-gray-700">
                                     Your Profile
                                   </a>
                                 </Link>
                               </Menu.Item>
                               <Menu.Item>
-                                <Link href="/settings">
+                                <Link href="/settings" legacyBehavior>
                                   <a className="block hover:bg-gray-100 px-4 py-2 text-sm text-gray-700">
                                     Settings
                                   </a>
@@ -159,12 +161,12 @@ const Navbar = ({ user, currentPath }) => {
                 </>
               ) : (
                 <div className="space-x-4 flex items-center ml-4">
-                  <Link href="/login">
+                  <Link href="/login" legacyBehavior>
                     <a className="hidden sm:flex font-semibold text-gray-600 text-sm">
                       Log In
                     </a>
                   </Link>
-                  <Link href="/signup">
+                  <Link href="/signup" legacyBehavior>
                     <a className="hidden sm:flex bg-pink-500 hover:bg-pink-600 transition text-white font-semibold text-sm px-3 py-2 rounded-md">
                       Sign Up
                     </a>
@@ -176,7 +178,7 @@ const Navbar = ({ user, currentPath }) => {
           <Disclosure.Panel className="lg:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {navigation.map((link) => (
-                <Link key={link.name} href={link.href}>
+                <Link key={link.name} href={link.href} legacyBehavior>
                   <a
                     className={
                       currentPath === link.href
@@ -231,12 +233,12 @@ const Navbar = ({ user, currentPath }) => {
                   </div>
                 </div>
                 <div className="mt-3 space-y-1">
-                  <Link href={`/${user.username}`}>
+                  <Link href={`/${user.username}`} legacyBehavior>
                     <a className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">
                       Your Profile
                     </a>
                   </Link>
-                  <Link href="/settings">
+                  <Link href="/settings" legacyBehavior>
                     <a className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">
                       Settings
                     </a>
@@ -247,7 +249,7 @@ const Navbar = ({ user, currentPath }) => {
                   >
                     Sign out
                   </a>
-                  <Link href="/posts/new">
+                  <Link href="/posts/new" legacyBehavior>
                     <a className="bg-pink-500 hover:bg-pink-600 transition rounded text-white mx-4 py-2 font-semibold flex items-center justify-center">
                       <PlusIcon className="h-4 w-4 mr-1" />
                       <p className="text-sm">New Post</p>
@@ -257,7 +259,7 @@ const Navbar = ({ user, currentPath }) => {
               </div>
             ) : (
               <div className="pt-4 pb-3 border-t border-gray-200 flex flex-col space-2 items-center px-4">
-                <Link href="/login">
+                <Link href="/login" legacyBehavior>
                   <a className="font-semibold text-pink-600 text-center w-full py-2">
                     Log In
                   </a>

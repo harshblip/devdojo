@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { SearchIcon } from '@heroicons/react/solid';
 
-import baseURL from '../utils/baseURL';
+// import baseURL from '../utils/baseURL';
 
 const Search = () => {
   const [searchText, setSearchText] = useState('');

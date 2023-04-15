@@ -3,7 +3,7 @@ import Home from './home';
 import Login from './login';
 import Search from './search';
 import Signup from './signup';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 import Features from '../components/landing-page/Features.js';
 import CTA from '../components/landing-page/CTA.js';
 import { QueryClient, QueryClientProvider, useInfiniteQuery } from 'react-query';
@@ -25,6 +25,7 @@ function index(){
       <QueryClientProvider client={queryClient}>
         {/* <Home /> */}
       {/* <Login /> */}
+      <Navbar />
         <Search />
         {/* <Signup /> */}
       </QueryClientProvider>

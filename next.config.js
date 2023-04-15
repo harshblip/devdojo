@@ -9,7 +9,8 @@ module.exports = {
       "links.papareact.com",
       "platform-lookaside.fbsbx.com",
       "firebasstorage.googleapis.com",
-      "looper.com"
+      "looper.com",
+      "encrypted-tbn0.gstatic.com"
     ]
   }
 }
