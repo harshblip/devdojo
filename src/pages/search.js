@@ -46,7 +46,7 @@ const SearchPage = ({ user }) => {
       >
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <span className="text-gray-500 sm:text-sm">
-            <SearchIcon className="h-5 w-5" />
+            <SearchIcon className="h-5 w-5 mt-0" />
           </span>
         </div>
         <input
