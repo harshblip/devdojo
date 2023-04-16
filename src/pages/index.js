@@ -27,10 +27,13 @@ function index(){
       <CTA /> */}
       <QueryClientProvider client={queryClient}>
       <Navbar />
+      <Hero />
+      <Features />
+      <CTA />
         {/* <Home /> */}
       {/* <Login /> */}
         {/* <Search /> */}
-        <Notif />
+        {/* <Notif /> */}
         {/* <Signup /> */}
         <Footer />
       </QueryClientProvider>

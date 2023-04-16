@@ -10,7 +10,8 @@ module.exports = {
       "platform-lookaside.fbsbx.com",
       "firebasstorage.googleapis.com",
       "looper.com",
-      "encrypted-tbn0.gstatic.com"
+      "encrypted-tbn0.gstatic.com",
+      "imgur.com"
     ]
   }
 }
