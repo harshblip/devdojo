@@ -4,6 +4,7 @@ import Login from './login';
 import Search from './search';
 import Signup from './signup';
 import Navbar from '../components/Navbar';
+import Settings from './settings';
 import Features from '../components/landing-page/Features.js';
 import CTA from '../components/landing-page/CTA.js';
 import { QueryClient, QueryClientProvider, useInfiniteQuery } from 'react-query';
@@ -23,10 +24,11 @@ function index(){
       <Features />
       <CTA /> */}
       <QueryClientProvider client={queryClient}>
+      <Navbar />
         {/* <Home /> */}
       {/* <Login /> */}
-      <Navbar />
-        <Search />
+        {/* <Search /> */}
+        <Settings />
         {/* <Signup /> */}
       </QueryClientProvider>
     </>
