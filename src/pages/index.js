@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Hero from '../components/landing-page/Hero.js';
 import Home from './home';
 import Login from './login';
@@ -28,10 +29,10 @@ function index(){
       <Features />
       <CTA /> */}
       <QueryClientProvider client={queryClient}>
-      <Navbar />
-      {/* <Hero />
+      {/* <Navbar /> */}
+      <Hero />
       <Features />
-      <CTA /> */}
+      <CTA />
       {/* <Settings /> */}
         {/* <Home /> */}
       {/* <Login /> */}
