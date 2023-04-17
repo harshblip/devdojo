@@ -26,7 +26,7 @@ const PostInput = ({
           <input
             type="text"
             id={id}
-            className="focus:ring-pink-500 focus:border-pink-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+            className="focus:ring-pink-500 focus:border-pink-500 block w-full p-4 pl-10 sm:text-sm border-gray-300 rounded-md"
             placeholder={placeholder}
             value={value}
             onChange={(e) => setValue(e.target.value)}

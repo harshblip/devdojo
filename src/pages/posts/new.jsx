@@ -18,7 +18,7 @@ import RichTextEditor from '../../components/new-post/RichTextEditor';
 import ImageDropzone from '../../components/new-post/ImageDropzone';
 import ThumbnailsDND from '../../components/new-post/ThumbnailsDND';
 
-import baseURL from '../../utils/baseURL';
+// import baseURL from '../../utils/baseURL';
 
 const NewPost = ({ user }) => {
   const router = useRouter();
@@ -74,7 +74,8 @@ const NewPost = ({ user }) => {
       <div className="container mx-auto flex flex-col items-center">
         <h1 className="text-3xl mb-8 text-gray-700 font-bold mr-auto">
           Ready to post,{' '}
-          <span className="text-pink-600">{user.name.split(' ')[0]}</span>?
+          {/* {user.name.split(' ')[0]} */}
+          <span className="text-pink-600"> Harsh Jipkate </span>?
         </h1>
         <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-5 mr-auto block w-full">
