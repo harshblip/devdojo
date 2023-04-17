@@ -13,13 +13,15 @@ const getPosts = async (page) => {
   const { data } = await axios.get(`${baseURL}/api/posts?page=${page}`);
   return data;
 };
+{/* <QueryClientProvider client={queryClient}>
 
+  </QueryClientProvider> */}
 const HomePage = ({ user }) => {
   const { data, hasNextPage, fetchNextPage, isFetchingNextPage } =
-    useInfiniteQuery(['posts'], ({ pageParam = 1 }) => getPosts(pageParam), {
-      getNextPageParam: (lastPage) => lastPage.next,
-    });
-
+  useInfiniteQuery(['posts'], ({ pageParam = 1 }) => getPosts(pageParam), {
+    getNextPageParam: (lastPage) => lastPage.next,
+  });
+  
   return (
     <main className="bg-gray-50">
       <HeroBanner user={user} />

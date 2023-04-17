@@ -38,7 +38,7 @@ function index(){
         {/* <Search /> */}
         {/* <Notif /> */}
         {/* <Signup /> */}
-        <Message />
+        {/* <Message /> */}
         <Footer />
       </QueryClientProvider>
     </>
