@@ -7,7 +7,6 @@ import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 
 import PostCard from '../components/PostCard';
-import BadgeModal from '../components/BadgeModal';
 import ProfileHeader from '../components/profile-page/ProfileHeader';
 import SavedPosts from '../components/profile-page/SavedPosts';
 import ProfileTabs from '../components/profile-page/ProfileTabs';
