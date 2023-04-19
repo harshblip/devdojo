@@ -8,6 +8,7 @@ import { dehydrate } from "react-query/hydration";
 // import baseURL from '../utils/baseURL';
 import HeroBanner from "../components/home/HeroBanner";
 import PostCard from "../components/PostCard";
+import { useState } from "react";
 
 const getPosts = async (page) => {
   const { data } = await axios.get(`${baseURL}/api/posts?page=${page}`);
@@ -15,13 +16,12 @@ const getPosts = async (page) => {
 };
 
 const HomePage = ({ user }) => {
-  const { data, hasNextPage, fetchNextPage, isFetchingNextPage } =
-    useInfiniteQuery(["posts"], ({ pageParam = 1 }) => getPosts(pageParam), {
-      getNextPageParam: (lastPage) => lastPage.next,
-    });
+  const [ data, hasNextPage, fetchNextPage, isFetchingNextPage ] = useState('');
+    // useInfiniteQuery(["posts"], ({ pageParam = 1 }) => getPosts(pageParam), {
+      // getNextPageParam: (lastPage) => lastPage.next,
+    // });
 
   return (
-    <QueryClientProvider client={queryClient}>
       <main className="bg-gray-50">
         <HeroBanner user={user} />
         <InfiniteScroll
@@ -43,7 +43,6 @@ const HomePage = ({ user }) => {
           </div>
         )}
       </main>
-    </QueryClientProvider>
   );
 };
 

@@ -26,7 +26,7 @@ const queryClient = new QueryClient();
 
 function index() {
   return (
-    
+    <>
       {/* <Hero />
       <Features />
       <CTA /> */}
@@ -44,7 +44,7 @@ function index() {
       {/* <Signup /> */}
       {/* <Message /> */}
       <Footer />
-    </QueryClientProvider>
+    </>
   );
 }
 

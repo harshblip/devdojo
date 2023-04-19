@@ -6,7 +6,6 @@ import Home from "../../pages/home";
 
 const Hero = () => {
   return (
-    <QueryClientProvider client={queryClient}>
       <div className="bg-gray-50">
         <div className="relative overflow-hidden">
           <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
@@ -132,7 +131,6 @@ const Hero = () => {
         </div>
         <div className="bg-pink-600 pb-12"></div>
       </div>
-    </QueryClientProvider>  
   );
 };
 
