@@ -37,6 +37,7 @@ const HomePage = ({ user }) => {
             ))}
           </Fragment>
         ))} */}
+        {/* new project */}
       </InfiniteScroll>
       {isFetchingNextPage && (
         <div className="py-8">
