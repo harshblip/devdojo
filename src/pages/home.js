@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Fragment } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
-import { QueryClient, QueryClientProvider, useInfiniteQuery } from 'react-query';
+import { QueryClient, useInfiniteQuery } from 'react-query';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { dehydrate } from 'react-query/hydration';
 
@@ -13,15 +13,13 @@ const getPosts = async (page) => {
   const { data } = await axios.get(`${baseURL}/api/posts?page=${page}`);
   return data;
 };
-{/* <QueryClientProvider client={queryClient}>
 
-  </QueryClientProvider> */}
 const HomePage = ({ user }) => {
   const { data, hasNextPage, fetchNextPage, isFetchingNextPage } =
-  useInfiniteQuery(['posts'], ({ pageParam = 1 }) => getPosts(pageParam), {
-    getNextPageParam: (lastPage) => lastPage.next,
-  });
-  
+    useInfiniteQuery(['posts'], ({ pageParam = 1 }) => getPosts(pageParam), {
+      getNextPageParam: (lastPage) => lastPage.next,
+    });
+
   return (
     <main className="bg-gray-50">
       <HeroBanner user={user} />
@@ -37,7 +35,6 @@ const HomePage = ({ user }) => {
             ))}
           </Fragment>
         ))} */}
-        {/* new project */}
       </InfiniteScroll>
       {isFetchingNextPage && (
         <div className="py-8">

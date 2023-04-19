@@ -31,14 +31,14 @@ function index(){
       <Features />
       <CTA /> */}
       <QueryClientProvider client={queryClient}>
+      {/* <Home /> */}
       {/* <Navbar /> */}
-      {/* <Hero />
+      <Hero />
       <Features />
-      <CTA /> */}
+      <CTA />
       {/* <New /> New Post */}
       {/* <Token /> create profile */}
       {/* <Settings /> */}
-        {/* <Home /> */}
       {/* <Login /> */}
         {/* <Search /> */}
         {/* <Notif /> */}

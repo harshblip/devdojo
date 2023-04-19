@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { queryClient, QueryClientProvider } from 'react-query';
+import Home from '../../pages/home'
 
 const Hero = () => {
   return (
@@ -96,9 +98,13 @@ const Hero = () => {
                     Join Community
                   </a>
                 </Link>
-                <Link href="/home" legacyBehavior>
+                <Link href="/" legacyBehavior>
                   <a className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink-600 bg-pink-100 hover:bg-pink-200 md:py-3 md:text-lg md:px-6 inline-block">
                     Discover Posts
+                    <QueryClientProvider client={queryClient}>
+      {/* Your app components */}
+                    <Home />
+    </QueryClientProvider>
                   </a>
                 </Link>
               </div>
