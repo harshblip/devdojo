@@ -1,6 +1,6 @@
 import axios from 'axios';
 import cookie from 'js-cookie';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { parseCookies } from 'nookies';
 import InfiniteScroll from 'react-infinite-scroller';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -19,14 +19,14 @@ const getFeed = async (page, token) => {
 };
 
 const FeedPage = ({ user }) => {
-  const { data, hasNextPage, fetchNextPage, isFetchingNextPage } =
-    useInfiniteQuery(
-      ['feed'],
-      ({ pageParam = 1 }) => getFeed(pageParam, cookie.get('token')),
-      {
-        getNextPageParam: (lastPage) => lastPage.next,
-      }
-    );
+  const [ data, hasNextPage, fetchNextPage, isFetchingNextPage ] = useState('');
+    // useInfiniteQuery(
+    //   ['feed'],
+    //   ({ pageParam = 1 }) => getFeed(pageParam, cookie.get('token')),
+    //   {
+    //     getNextPageParam: (lastPage) => lastPage.next,
+    //   }
+    // );
 
 //   if (data.pages[0].posts.length === 0) {
 //     return (

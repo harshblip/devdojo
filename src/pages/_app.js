@@ -1,9 +1,13 @@
 import "@/styles/globals.css";
 import "@/styles/homepage.css";
-// import { QueryClientProvider, queryClient } from "./queryClient";
+import Navbar from "../components/Navbar";
 
 export default function App({ Component, pageProps }) {
-  // <QueryClientProvider client={queryClient}>
-    return <Component {...pageProps} />
-  // </QueryClientProvider>;
+
+  return(
+<>
+<Navbar />
+<Component {...pageProps} />
+</>
+    )
 }

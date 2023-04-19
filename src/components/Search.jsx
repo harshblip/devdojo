@@ -12,26 +12,26 @@ const Search = () => {
 
   const router = useRouter();
 
-  const { data, isLoading, isSuccess } = useQuery(
-    ['search', searchText],
-    async () => {
-      const CancelToken = axios.CancelToken;
-      const source = CancelToken.source();
+  // const { data, isLoading, isSuccess } = useQuery(
+  //   // ['search', searchText],
+  //   async () => {
+  //     const CancelToken = axios.CancelToken;
+  //     const source = CancelToken.source();
 
-      const promise = await axios.get(`${baseURL}/api/search/${searchText}`, {
-        cancelToken: source.token,
-      });
+  //     const promise = await axios.get(`${baseURL}/api/search/${searchText}`, {
+  //       cancelToken: source.token,
+  //     });
 
-      promise.cancel = () => {
-        source.cancel();
-      };
+  //     promise.cancel = () => {
+  //       source.cancel();
+  //     };
 
-      return promise.data;
-    },
-    {
-      enabled: !!searchText,
-    }
-  );
+  //     return promise.data;
+  //   },
+  //   {
+  //     enabled: !!searchText,
+  //   }
+  // );
 
   return (
     <div className="relative flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">

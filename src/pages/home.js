@@ -18,7 +18,7 @@ const getPosts = async (page) => {
 const HomePage = ({ user }) => {
   const [ data, hasNextPage, fetchNextPage, isFetchingNextPage ] = useState('');
     // useInfiniteQuery(["posts"], ({ pageParam = 1 }) => getPosts(pageParam), {
-      // getNextPageParam: (lastPage) => lastPage.next,
+    //   getNextPageParam: (lastPage) => lastPage.next,
     // });
 
   return (
