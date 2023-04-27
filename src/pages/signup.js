@@ -29,6 +29,8 @@ const Signup = () => {
     password: '',
   });
 
+// started again and gonna finish now
+
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const [formLoading, setFormLoading] = useState(false);
