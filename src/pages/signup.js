@@ -26,7 +26,7 @@ const Signup = () => {
   const [user, setUser] = useState({
     name: '',
     email: '',
-    password: '',
+    password: '', 
   });
 
   // with commit message
