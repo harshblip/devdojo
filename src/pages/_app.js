@@ -1,16 +1,19 @@
 import "@/styles/globals.css";
-import "@/styles/homepage.css";
 import Navbar from "../components/Navbar";
-import { Inter } from 'next/font/google';
+import { Inter, Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto ({
+  subsets: ['latin'],
+  weight: '400',
+})
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
-
-  return(
-<main className = {inter.className}>
-<Navbar />
-<Component {...pageProps} />
-</main>
-    )
+  return (
+    <main className={inter.className}>
+      <Navbar />
+      <Component {...pageProps} />
+    </main>
+  );
 }

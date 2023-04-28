@@ -1,11 +1,4 @@
-font-clash {
-    font-family: 'clash-grotesk';
-}
-
 @font-face {
     font-family: "CustomFont";
     src: url("https://api.fontshare.com/v2/css?f[]=excon@300&display=swap");
-}
-*{
-    font-family: 'Clash Grotesk';
 }

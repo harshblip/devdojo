@@ -167,7 +167,7 @@ const Navbar = ({ user, currentPath }) => {
                     </a>
                   </Link>
                   <Link href="/signup" legacyBehavior>
-                    <a className="hidden sm:flex bg-pink-500 hover:bg-pink-600 transition text-white font-semibold text-sm px-3 py-2 rounded-md">
+                    <a className="hidden sm:flex bg-black/70 transition text-white font-semibold text-sm px-3 py-2 rounded-md">
                       Sign Up
                     </a>
                   </Link>
