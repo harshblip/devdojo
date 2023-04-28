@@ -112,7 +112,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 flex flex-col" aria-hidden="true">
               <div className="flex-1" />
-              <div className="flex-1 w-full bg-pink-600" />
+              <div className="flex-1 w-full bg-blue-" />
             </div>
             <motion.div
               initial={{ y: 120, opacity: 0 }}
@@ -120,16 +120,16 @@ const Hero = () => {
               transition={{ duration: 1, delay: 0.75 }}
               className="max-w-7xl mx-auto px-4 sm:px-6"
             >
-              <Image
+              {/* <Image
                 className="relative rounded-lg shadow-lg"
                 src="https://imgur.com/pZJQ5kT.png"
                 width={1920}
                 height={1080}
-              />
+              /> */}
             </motion.div>
           </div>
         </div>
-        <div className="bg-pink-600 pb-12"></div>
+        <div className="bg-black/70 pb-12"></div>
       </div>
   );
 };

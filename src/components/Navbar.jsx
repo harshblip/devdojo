@@ -9,6 +9,7 @@ import {
   PlusIcon,
   ChatAlt2Icon,
 } from '@heroicons/react/outline';
+import img from '../assets/images/polygon-token.png';
 
 import Search from './Search';
 
