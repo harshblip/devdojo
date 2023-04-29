@@ -55,3 +55,18 @@ input {
 .signupbg {
   background-color: linear-gradient(to bottom, #1c1c1c 60%, #ffffff 60%);
 }
+
+.montes {
+  font-family: 'Montserrat', monospace;
+  font-weight: 400;
+}
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.signupp {
+  border-radius: 50px;
+  box-shadow:  20px 20px 60px #b26060,
+             -20px -20px 60px #f08282;
+}

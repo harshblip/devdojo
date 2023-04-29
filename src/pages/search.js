@@ -8,6 +8,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import PostCard from "../components/PostCard";
+import Navbar from "../components/Navbar";
 import SearchHeader from "../components/SearchHeader";
 
 // import baseURL from '../utils/baseURL';
@@ -39,6 +40,7 @@ const SearchPage = ({ user }) => {
 
   return (
     <div>
+      <Navbar/>
       <SearchHeader />
       <form
         onSubmit={onSubmit}

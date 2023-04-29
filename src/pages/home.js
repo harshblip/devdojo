@@ -9,6 +9,7 @@ import { dehydrate } from "react-query/hydration";
 import HeroBanner from "../components/home/HeroBanner";
 import PostCard from "../components/PostCard";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 const getPosts = async (page) => {
   const { data } = await axios.get(`${baseURL}/api/posts?page=${page}`);
@@ -22,7 +23,8 @@ const HomePage = ({ user }) => {
     // });
 
   return (
-      <main className="bg-gray-50">
+    <main className="bg-gray-50">
+        <Navbar/>
         <HeroBanner user={user} />
         <InfiniteScroll
           hasMore={hasNextPage}
@@ -39,7 +41,7 @@ const HomePage = ({ user }) => {
         </InfiniteScroll>
         {isFetchingNextPage && (
           <div className="py-8">
-            <AiOutlineLoading3Quarters className="h-8 w-8 animate-spin mx-auto text-pink-600" />
+            <AiOutlineLoading3Quarters className="h-8 w-8 animate-spin mx-auto text-black" />
           </div>
         )}
       </main>
