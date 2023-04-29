@@ -32,17 +32,17 @@ const Navbar = ({ user, currentPath }) => {
               <div className="flex px-2 md:px-0">
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/home">
-                    <img
-                      className="block rounded-full lg:hidden h-10 w-auto cursor-pointer"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
+                    <Image
+                      className="block mix-blend-multiply rounded-full lg:hidden h-10 w-auto cursor-pointer"
+                      src={img}
                       alt="Driwwwle"
                     />
                   </Link>
                   <Link href="/home">
 
-                    <img
-                      className="hidden logo lg:block h-14 w-auto cursor-pointer"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe17Bi4bxrRXOBhNK2I-n99WaXsGDb6WXJQ&usqp=CAU"
+                    <Image
+                      className="hidden bg-red color-dodge logo lg:block h-14 w-auto cursor-pointer"
+                      src={img}
                       alt="Driwwwle"
                     />
                     
@@ -55,7 +55,7 @@ const Navbar = ({ user, currentPath }) => {
                         className={`${
                           currentPath === link.href
                             ? 'border-pink-500 text-gray-900 font-semibold'
-                            : 'border-transparent hover:text-pink-500 text-gray-500 font-medium'
+                            : 'border-transparent hover:bg-gray-100 transition-all text-gray-500 font-medium'
                         } inline-flex items-center px-1 pt-1 border-b-2 text-sm`}
                       >
                         {link.name}

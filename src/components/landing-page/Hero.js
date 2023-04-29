@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
             <div className="relative h-full">
               <svg
-                className="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full"
+                className="heropatt absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full"
                 width={404}
                 height={784}
                 fill="none"
@@ -26,21 +26,13 @@ const Hero = () => {
                     height={20}
                     patternUnits="userSpaceOnUse"
                   >
-                    <rect
-                      x={0}
-                      y={0}
-                      width={4}
-                      height={4}
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
                   </pattern>
                 </defs>
-                <rect
+                {/* <rect
                   width={404}
                   height={784}
                   fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)"
-                />
+                /> */}
               </svg>
               <svg
                 className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"

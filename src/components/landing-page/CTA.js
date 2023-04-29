@@ -11,7 +11,7 @@ const CTA = () => {
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <Link href="/signup" legacyBehavior>
-              <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700">
+              <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black/70 hover:bg-gray-500 transition-all ">
                 Get started
               </a>
             </Link>
