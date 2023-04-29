@@ -55,10 +55,10 @@ const Navbar = ({ user, currentPath }) => {
                         className={`${
                           currentPath === link.href
                             ? 'border-pink-500 text-gray-900 font-semibold'
-                            : 'border-transparent hover:bg-gray-100 transition-all text-gray-500 font-medium'
-                        } inline-flex items-center px-1 pt-1 border-b-2 text-sm`}
+                            : 'border-transparent  transition-all text-gray-500 font-medium'
+                        } inline-flex justify-center items-center px-1 pt-1 border-b-2 text-sm`}
                       >
-                        {link.name}
+                       <p className = "hover:bg-gray-200 rounded-xl p-2 trans "> {link.name} </p>
                       </a>
                     </Link>
                   ))}
