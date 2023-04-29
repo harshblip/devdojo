@@ -41,3 +41,17 @@ body {
 .trans {
   transition-duration: 0.2s;
 }
+
+input {
+  padding: 12px;
+}
+
+.textt {
+  font-family: 'Montserrat', monospace;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.signupbg {
+  background-color: linear-gradient(to bottom, #1c1c1c 60%, #ffffff 60%);
+}

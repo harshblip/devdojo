@@ -72,14 +72,14 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-center text-base mt-6 text-gray-400">
-          &copy; {new Date().getFullYear()} Driwwwle. Powered by{' '}
+          &copy; {new Date().getFullYear()} DevDojo. Powered by{' '}
           <a
             className="hover:text-green-600 transition"
             href="http://tealpod.com/"
             target="_blank"
             rel="noreferrer"
           >
-            Tealpod
+            Sus
           </a>
           .
         </p>

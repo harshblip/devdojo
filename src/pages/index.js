@@ -31,7 +31,7 @@ function index() {
       <Features />
       <CTA /> */}
       {/* <Home /> */}
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Features />
       <CTA />

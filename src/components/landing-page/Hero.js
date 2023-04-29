@@ -29,11 +29,6 @@ const Hero = () => {
                   >
                   </pattern>
                 </defs>
-                {/* <rect
-                  width={404}
-                  height={784}
-                  fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)"
-                /> */}
               </svg>
               <svg
                 className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
