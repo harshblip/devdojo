@@ -70,3 +70,7 @@ input {
   box-shadow:  20px 20px 60px #b26060,
              -20px -20px 60px #f08282;
 }
+
+#particles-js {
+  width: 100%;
+}

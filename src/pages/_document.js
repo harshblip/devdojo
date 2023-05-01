@@ -20,6 +20,8 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script src = "src/pages/particles.js">  </script>
+        <script src = "src/pages/app.js"> </script>
       </body>
     </Html>
   );
