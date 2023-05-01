@@ -27,7 +27,7 @@ const features = [
   {
     name: 'Free and open-source, forever',
     description:
-      'Driwwwle will remain free forever with no advertisement, data collection, tracking or anything of that sorts!',
+      'Devdojo will remain free forever with no advertisement, data collection, tracking or anything of that sorts!',
     icon: EmojiHappyIcon,
   },
 ];
