@@ -150,7 +150,7 @@ const Login = () => {
 };
 
 export function getServerSideProps() {
-  return { props: { title: "Login to Driwwwle" } };
+  return { props: { title: "Login to Devdojo" } };
 }
 
 export default Login;

@@ -105,7 +105,7 @@ const Signup = () => {
           <div>
             <div>
               <h2 className="text-center textt text-3xl font-extrabold text-gray-900">
-                Welcome to Driwwwle
+                Welcome to Devdojo
               </h2>
               <p className="text-center text-gray-500 mt-2 mb-6 font-semibold text-md">
                 We're thrilled to have you onboard
