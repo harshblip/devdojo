@@ -71,6 +71,12 @@ input {
              -20px -20px 60px #f08282;
 }
 
+.loginn {
+  display: block;
+  border-top: 5px solid black;
+  padding: 42px;
+}
+
 #particles-js {
   width: 100%;
 }
