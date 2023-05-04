@@ -54,7 +54,8 @@ const Login = () => {
                     <MailIcon
                       className="h-5 w-5 text-gray-400"
                       aria-hidden="true"
-                    />
+                    /> 
+                    {/* // comment/ */}
                   </div>
                   <input
                     type="email"
