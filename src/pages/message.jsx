@@ -14,9 +14,10 @@ import Banner from '../components/messages-page/Banner';
 import Message from '../components/messages-page/Message';
 import MessageInput from '../components/messages-page/MessageInput';
 
-// import baseURL from '../utils/baseURL';
-// import getUserInfo from '../utils/getUserInfo';
-// import messageNotification from '../utils/messageNotification';
+import baseURL from '../../utils/baseURL';
+import getUserInfo from '../../utils/getUserInfo';
+import messageNotification from '../../utils/messageNotification';
+
 
 const getChats = async (token) => {
   const { data } = await axios.get(`${baseURL}/api/chats`, {
@@ -35,9 +36,9 @@ const MessagesPage = ({ user }) => {
   const router = useRouter();
   const { chat } = router.query;
 
-//   if (chat === user._id) {
-//     router.push('/messages');
-//   }
+  if (chat === user._id) {
+    router.push('/messages');
+  }
 
   const [chats, setChats] = useState(data);
   const [connectedUsers, setConnectedUsers] = useState([]);
@@ -50,15 +51,15 @@ const MessagesPage = ({ user }) => {
 
   // Connecting to socket
   useEffect(() => {
-    // if (!socket.current) {
-    //   socket.current = io(baseURL);
-    // }
-    // if (socket.current) {
-    //   socket.current.emit('join', { userId: user._id });
-    //   socket.current.on('connectedUsers', ({ users }) => {
-    //     users.length > 0 && setConnectedUsers(users);
-    //   });
-    // }
+    if (!socket.current) {
+      socket.current = io(baseURL);
+    }
+    if (socket.current) {
+      socket.current.emit('join', { userId: user._id });
+      socket.current.on('connectedUsers', ({ users }) => {
+        users.length > 0 && setConnectedUsers(users);
+      });
+    }
   }, []);
 
   // Loading message from socket
@@ -202,13 +203,13 @@ const MessagesPage = ({ user }) => {
           </div>
           <Search chats={chats} setChats={setChats} />
           <ul className="py-1">
-            {/* {chats.map((chat) => ( */}
-              {/* <ChatItem
+            {chats.map((chat) => (
+              <ChatItem
                 key={chat.messagesWith}
                 chat={chat}
                 connectedUsers={connectedUsers}
-              /> */}
-            {/* ))} */}
+              />
+             ))}
           </ul>
         </div>
         <div

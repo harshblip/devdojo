@@ -7,7 +7,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { QueryClient, useInfiniteQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 
-// import baseURL from '../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 import PostCard from '../components/PostCard';
 import Recommendations from '../components/Recommendations';
 
@@ -20,21 +20,21 @@ const getFeed = async (page, token) => {
 
 const FeedPage = ({ user }) => {
   const [ data, hasNextPage, fetchNextPage, isFetchingNextPage ] = useState('');
-    // useInfiniteQuery(
-    //   ['feed'],
-    //   ({ pageParam = 1 }) => getFeed(pageParam, cookie.get('token')),
-    //   {
-    //     getNextPageParam: (lastPage) => lastPage.next,
-    //   }
-    // );
+    useInfiniteQuery(
+      ['feed'],
+      ({ pageParam = 1 }) => getFeed(pageParam, cookie.get('token')),
+      {
+        getNextPageParam: (lastPage) => lastPage.next,
+      }
+    );
 
-//   if (data.pages[0].posts.length === 0) {
-//     return (
-//       <div className="container mx-auto px-6 py-8 md:px-12 md:py-10">
-//         <Recommendations user={user} />
-//       </div>
-//     );
-//   }
+  if (data.pages[0].posts.length === 0) {
+    return (
+      <div className="container mx-auto px-6 py-8 md:px-12 md:py-10">
+        <Recommendations user={user} />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -48,13 +48,13 @@ const FeedPage = ({ user }) => {
           loadMore={fetchNextPage}
           className="container mx-auto grid gap-x-5 gap-y-7 place-items-center grid-cols-auto-fill"
         >
-          {/* {data.pages.map((page, i) => (
+          {data.pages.map((page, i) => (
             <Fragment key={i}>
               {page.posts.map((post) => (
                 <PostCard user={user} key={post._id} post={post} />
               ))}
             </Fragment>
-          ))} */}
+          ))}
         </InfiniteScroll>
         {isFetchingNextPage && (
           <div className="py-8">

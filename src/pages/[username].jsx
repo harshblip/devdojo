@@ -14,7 +14,7 @@ import Statistics from '../components/profile-page/Statistics';
 import SocialContainer from '../components/profile-page/SocialContainer';
 import NotFound from '../components/404';
 
-// import baseURL from '../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 
 const getProfile = async (username) => {
   const { data } = await axios.get(`${baseURL}/api/profile/${username}`);

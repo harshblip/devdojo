@@ -11,7 +11,8 @@ import {
   AiOutlineLoading,
 } from 'react-icons/ai';
 
-// import { onboardUser } from '../../utils/auth';
+import { onboardUser }  from '../../../utils/auth';
+
 
 const Onboarding = () => {
   const router = useRouter();

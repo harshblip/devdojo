@@ -5,7 +5,7 @@ import { QueryClient, useInfiniteQuery } from "react-query";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { dehydrate } from "react-query/hydration";
 
-// import baseURL from '../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 import HeroBanner from "../components/home/HeroBanner";
 import PostCard from "../components/PostCard";
 import { useState } from "react";
@@ -18,9 +18,9 @@ const getPosts = async (page) => {
 
 const HomePage = ({ user }) => {
   const [ data, hasNextPage, fetchNextPage, isFetchingNextPage ] = useState('');
-    // useInfiniteQuery(["posts"], ({ pageParam = 1 }) => getPosts(pageParam), {
-    //   getNextPageParam: (lastPage) => lastPage.next,
-    // });
+    useInfiniteQuery(["posts"], ({ pageParam = 1 }) => getPosts(pageParam), {
+      getNextPageParam: (lastPage) => lastPage.next,
+    });
 
   return (
     <main className="bg-gray-50">
@@ -31,13 +31,13 @@ const HomePage = ({ user }) => {
           loadMore={fetchNextPage}
           className="container mx-auto py-8 px-6 md:px-12 md:py-10 grid gap-x-5 gap-y-7 place-items-center grid-cols-auto-fill"
         >
-          {/* {data.pages.map((page, i) => (
+          {data.pages.map((page, i) => (
           <Fragment key={i}>
             {page.posts.map((post) => (
               <PostCard user={user} key={post._id} post={post} />
             ))}
           </Fragment>
-        ))} */}
+        ))}
         </InfiniteScroll>
         {isFetchingNextPage && (
           <div className="py-8">

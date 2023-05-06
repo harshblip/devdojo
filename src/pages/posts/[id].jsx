@@ -18,7 +18,8 @@ import RichTextEditor from '../../components/new-post/RichTextEditor';
 import ImageDropzone from '../../components/new-post/ImageDropzone';
 import ThumbnailsDND from '../../components/new-post/ThumbnailsDND';
 
-import baseURL from '../../utils/baseURL';
+import baseURL from '../../../utils/baseURL';
+
 
 const NewPost = ({ user }) => {
   const router = useRouter();

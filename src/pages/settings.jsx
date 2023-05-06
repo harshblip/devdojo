@@ -11,7 +11,7 @@ import UserSettings from '../components/settings-page/UserSettings';
 import ProfileSettings from '../components/settings-page/ProfileSettings';
 import PasswordSettings from '../components/settings-page/PasswordSettings';
 
-// import baseURL from '../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 
 const getProfile = async (token) => {
   const { data } = await axios.get(`${baseURL}/api/profile`, {

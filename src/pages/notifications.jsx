@@ -7,7 +7,8 @@ import { QueryClient, useQuery } from 'react-query';
 
 import NotificationItem from '../components/NotificationItem';
 
-// import baseURL from '../utils/baseURL';
+
+import baseURL from '../../utils/baseURL';
 
 const getNotifications = async (token) => {
   const { data } = await axios.get(`${baseURL}/api/notifications`, {
@@ -43,15 +44,15 @@ const NotificationsPage = () => {
       </h1>
       <div className="flow-root">
         <ul className="-mb-8">
-          {/* {data.map((notification, index) => (
+          {data.map((notification, index) => (
             <NotificationItem
               key={index}
               id={index}
               notification={notification}
               index={index}
               length={data.length}
-            /> */}
-           {/* ))} */}
+            />
+           ))}
         </ul>
       </div>
     </div>

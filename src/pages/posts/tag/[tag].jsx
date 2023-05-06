@@ -6,7 +6,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { QueryClient, useInfiniteQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 
-import baseURL from '../../../utils/baseURL';
+import baseURL from '../../../../utils/baseURL';
 import PostCard from '../../../components/PostCard';
 
 const TagPage = ({ user }) => {

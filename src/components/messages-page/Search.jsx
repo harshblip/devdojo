@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 
-// import baseURL from '../../utils/baseURL';
+import baseURL from '../../../utils/baseURL';
 
 const Search = ({ chats, setChats }) => {
   const [searchText, setSearchText] = useState('');

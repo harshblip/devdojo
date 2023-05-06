@@ -20,7 +20,7 @@ import ImageDropzone from '../../../components/edit-post/ImageDropzone';
 import ThumbnailsDND from '../../../components/edit-post/ThumbnailsDND';
 import FileThumbnailsDND from '../../../components/new-post/ThumbnailsDND';
 
-// import baseURL from '../../../utils/baseURL';
+import baseURL from '../../../../utils/baseURL';
 
 const getPost = async (id) => {
   const { data } = await axios.get(`${baseURL}/api/posts/${id}`);

@@ -6,7 +6,7 @@ import { useMutation } from 'react-query';
 import { AiOutlineLoading } from 'react-icons/ai';
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
 
-// import baseURL from '../../utils/baseURL';
+import { onboardUser }  from '../../../utils/auth';
 
 const ResetPassword = () => {
   const [password, setPassword] = useState('');

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useMutation } from 'react-query';
 import { ChatAltIcon } from '@heroicons/react/outline';
 
-import baseURL from '../../utils/baseURL';
+import baseURL from '../../../utils/baseURL';
 
 const NewComment = ({ id, queryClient }) => {
   const [text, setText] = useState('');

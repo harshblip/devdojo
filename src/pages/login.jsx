@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/outline";
 import Auth from "../assets/images/Authentication.png";
 
-// import { loginUser } from '../utils/auth';
+import { loginUser } from '../../utils/auth';
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -26,6 +26,22 @@ const Login = () => {
 
   const { email, password } = user;
 
+  const handleChange = (e) => {
+    setUser((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    loginUser({ email, password }, setError, setFormLoading, toast);
+  };
+
+  useEffect(() => {
+    const isUser = Object.values({ email, password }).every((item) =>
+      Boolean(item)
+    );
+    isUser ? setSubmitDisabled(false) : setSubmitDisabled(true);
+  }, [user]);
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -39,7 +55,7 @@ const Login = () => {
               Ready to discover creative websites today?
             </p>
           </div>
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="rounded-md shadow-sm space-y-4">
               {/* Email */}
               <div>
@@ -64,6 +80,7 @@ const Login = () => {
                     className="focus:ring-black focus:border-black block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                     placeholder="you@example.com"
                     value={email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -106,6 +123,7 @@ const Login = () => {
                     id="password"
                     className="focus:ring-black focus:border-black block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                     value={password}
+                    onChange={handleChange}
                     placeholder="Must be atleast 6 characters"
                     required
                   />

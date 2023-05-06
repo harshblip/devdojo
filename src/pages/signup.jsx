@@ -18,8 +18,8 @@ import img from "../assets/images/polygon-token.png";
 
 import EmailConfirmModal from "../components/EmailConfirmModal";
 
-// import baseURL from '../utils/baseURL';
-// import { registerUser } from '../utils/auth';
+import baseURL from "../../utils/baseURL";
+import { registerUser } from "../../utils/auth";
 
 const usernameRegex = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
 let cancel;
@@ -30,9 +30,6 @@ const Signup = () => {
     email: "",
     password: "",
   });
-
-  // with commit message
-  // started again and gonna finish now
 
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
@@ -94,13 +91,13 @@ const Signup = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-row max-w-md border border-white rounded-3xl p-10 shadow-2xl bg-white space-y-8">
           <div>
-            {/* <Link href="/home">
+            <Link href="/home">
               <Image
                 className="block mix-blend-multiply rounded-full h-20 w-20 mt-64 mr-32   cursor-pointer"
                 src={img}
                 alt="Driwwwle"
               />
-            </Link> */}
+            </Link>
           </div>
           <div>
             <div>

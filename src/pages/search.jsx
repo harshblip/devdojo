@@ -11,27 +11,27 @@ import PostCard from "../components/PostCard";
 import Navbar from "../components/Navbar";
 import SearchHeader from "../components/SearchHeader";
 
-// import baseURL from '../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 
 const SearchPage = ({ user }) => {
   const [text, setText] = useState("");
   const [type, setType] = useState("posts");
 
   const [ data, isLoading, isFetching, refetch, hasNextPage, fetchNextPage ] = useState('');
-    // useInfiniteQuery(
-    //   ["search", type, text],
-    //   async ({ pageParam = 1 }) => {
-    //     const { data } = await axios.get(
-    //       `${baseURL}/api/search/advanced/${type}/${text}?page=${pageParam}`
-    //     );
-    //     return data;
-    //   },
-    //   {
-    //     enabled: false,
-    //     keepPreviousData: true,
-    //     getNextPageParam: (lastPage) => lastPage.next,
-    //   }
-    // );
+    useInfiniteQuery(
+      ["search", type, text],
+      async ({ pageParam = 1 }) => {
+        const { data } = await axios.get(
+          `${baseURL}/api/search/advanced/${type}/${text}?page=${pageParam}`
+        );
+        return data;
+      },
+      {
+        enabled: false,
+        keepPreviousData: true,
+        getNextPageParam: (lastPage) => lastPage.next,
+      }
+    );
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -75,7 +75,7 @@ const SearchPage = ({ user }) => {
           </select>
         </div>
       </form>
-      {/* {data?.pages[0]?.posts?.length > 0 && (
+      {data?.pages[0]?.posts?.length > 0 && (
         <InfiniteScroll
           hasMore={hasNextPage}
           loadMore={fetchNextPage}
@@ -89,8 +89,8 @@ const SearchPage = ({ user }) => {
             </Fragment>
           ))}
         </InfiniteScroll>
-      )} */}
-      {/* {data?.pages[0]?.posts?.length === 0 && (
+      )}
+      {data?.pages[0]?.posts?.length === 0 && (
         <p className="text-pink-600 text-center my-8 text-lg">No posts found</p>
       )}
       {data?.pages[0]?.users?.length > 0 && (
@@ -128,7 +128,7 @@ const SearchPage = ({ user }) => {
       )}
       {(isLoading || isFetching) && (
         <AiOutlineLoading3Quarters className="h-8 my-8 animate-spin mx-auto w-8 text-pink-600" />
-      )} */}
+      )}
     </div>
   );
 };

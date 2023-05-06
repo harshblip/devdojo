@@ -16,7 +16,7 @@ import { AiOutlineSend } from 'react-icons/ai';
 
 import Reply from './Reply';
 
-import baseURL from '../../utils/baseURL';
+import baseURL from '../../../utils/baseURL';
 
 const Comment = ({ comment, user, postId, queryClient }) => {
   const isLiked =
