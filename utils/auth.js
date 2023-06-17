@@ -44,7 +44,7 @@ export const loginUser = async (
     });
     setToken(res.data.token);
     console.log('redirecting to feed');
-    Router.push('/feed');
+    Router.push('/src/feed');
   } catch (error) {
     const errorMsg = catchErrors(error);
     setError(errorMsg);
