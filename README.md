@@ -1,3 +1,15 @@
+# Devdojo 
+Description
+
+Devdojo is an platform that empowers developers to work together expand their knowledge and build connections. By utilizing technologies such, as React, Next.js and Socket.IO it facilitates communication, strong user verification and a user friendly interface. Devdojo is transforming the way developers interact by promoting collaboration and the exchange of knowledge, within the developer community.
+
+- What problem did it solve ?
+Devdojo promotes collaboration and networking, among developers enabling them to connect with individuals and work together on projects thereby cultivating a more cohesive developer community.
+ 
+- What did I learn ?
+Through Devdojo, I gained hands-on experience in building real-time communication features, user authentication systems, and leveraging modern technologies like React, Next.js, and Socket.IO for creating dynamic web applications.
+
+## Installation
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -36,3 +48,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Screenshots
+### Home page
+![App Screenshot](https://xp.io/storage/16y8jRGL.jpg)
+
+### Login Page
+![App Screenshot](https://xp.io/storage/16ydsKag.jpg)
+
+### Search Page
+![App Screenshot](https://xp.io/storage/16yfVOoP.jpg)
+
+## Technologies used
+- ReactJs
+- Next.js
+- MaterialUI
+- Node.js
+- TailwindCSS
+
+
