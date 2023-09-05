@@ -4,9 +4,11 @@ Description
 Devdojo is an platform that empowers developers to work together expand their knowledge and build connections. By utilizing technologies such, as React, Next.js and Socket.IO it facilitates communication, strong user verification and a user friendly interface. Devdojo is transforming the way developers interact by promoting collaboration and the exchange of knowledge, within the developer community.
 
 - What problem did it solve ?
+  
 Devdojo promotes collaboration and networking, among developers enabling them to connect with individuals and work together on projects thereby cultivating a more cohesive developer community.
  
 - What did I learn ?
+  
 Through Devdojo, I gained hands-on experience in building real-time communication features, user authentication systems, and leveraging modern technologies like React, Next.js, and Socket.IO for creating dynamic web applications.
 
 ## Installation
