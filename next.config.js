@@ -1,17 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
 module.exports = {
   images: {
-    domains: [
-      "links.papareact.com",
-      "platform-lookaside.fbsbx.com",
-      "firebasstorage.googleapis.com",
-      "looper.com",
-      "encrypted-tbn0.gstatic.com",
-      "imgur.com"
-    ]
-  }
-}
+    domains: ['res.cloudinary.com', 'www.gravatar.com', 'imgur.com'],
+  },
+};

@@ -1,72 +1,82 @@
-# Devdojo 
-Description
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/34748469/133837934-3584c5a0-e650-46c1-a0c7-7125d30fd145.png" height="100" width="100" />
+</p>
+<h1 align="center">DevDojo</h1>
 
-Devdojo is an platform that empowers developers to work together expand their knowledge and build connections. By utilizing technologies such, as React, Next.js and Socket.IO it facilitates communication, strong user verification and a user friendly interface. Devdojo is transforming the way developers interact by promoting collaboration and the exchange of knowledge, within the developer community.
-
-- What problem did it solve ?
-  
-Devdojo promotes collaboration and networking, among developers enabling them to connect with individuals and work together on projects thereby cultivating a more cohesive developer community.
+<h3 align="center">The Social Network for Developers</h3>
  
-- What did I learn ?
-  
-Through Devdojo, I gained hands-on experience in building real-time communication features, user authentication systems, and leveraging modern technologies like React, Next.js, and Socket.IO for creating dynamic web applications.
+ <p align="center">
+  <img src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js" />
+  <img src="https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/-JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Hetzner-D50C2D?style=flat-square&logo=hetzner&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white" />
+ </p>
+ 
+----
+<h3 align="center">Features</h3>
 
-## Installation
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <p>⚡ Server-side rendering with Next.js<br />
+  🍪 Cookie-based authorization with JSON web tokens<br />
+  📜 Infinite scrolling feed with React Query<br />
+  🖼️ Cloud image upload with Cloudinary<br />
+  ❤️ Like, save and comment on posts<br />
+  💬 Realtime chat with Socket.io<br />
+  🤝 Follow developers and build personal feed<br />
+  and a lot more..</p>
+</div>
 
-## Getting Started
+## Running Locally
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Clone this repository and install dependencies by running:
+```
+npm install
+#or
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a new file named `config.env` with the following environment variables in the root of the project folder:
+```
+PORT = 
+MONGO_URI = 
+JWT_SECRET = 
+CLOUDINARY_CLOUD_NAME = 
+CLOUDINARY_API_KEY = 
+CLOUDINARY_API_SECRET = 
+SENDGRID_API_KEY = 
+SENDER_EMAIL = 
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Create a new file named `.env.local` with following configuration:
+```
+NEXT_PUBLIC_BASE_URL = http://localhost:3000
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+For development mode, run:
+```
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For production mode, run:
+```
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+Visit http://localhost:3000 or your custom port environment variable to view the app.
 
 ## Screenshots
-### Home page
-![App Screenshot](https://xp.io/storage/16y8jRGL.jpg)
 
-### Login Page
-![App Screenshot](https://xp.io/storage/16ydsKag.jpg)
+![Banner Image](https://user-images.githubusercontent.com/34748469/133844015-c1b49f42-95de-4b4c-93d6-0d74152578cc.png)
 
-### Search Page
-![App Screenshot](https://xp.io/storage/16yfVOoP.jpg)
+  Landing Page             |  Search
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/34748469/133844238-18e81ef2-ef31-4455-9b8f-08c71754fd97.png)  |  ![](https://user-images.githubusercontent.com/34748469/133844365-d01ebbe2-5c37-4ed8-9337-efb6c15a4828.png)
 
-## Technologies used
-- ReactJs
-- Next.js
-- MaterialUI
-- Node.js
-- TailwindCSS
-
-
+  Personal Feed             |  Post & Profile Page
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/34748469/133844617-a3217361-3968-4754-afd6-8f5918a576a5.png)  |  ![](https://user-images.githubusercontent.com/34748469/133844779-fb0bb198-1f9c-4e51-af88-ee55e5471ca4.png)

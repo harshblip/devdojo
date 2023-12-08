@@ -1,18 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
-  ],
+  mode: 'jit',
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(280px, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(290px, 1fr))',
+      },
+      spacing: {
+        chat: '88vh',
+        fullscreen: '80vh',
       },
     },
   },
-  plugins: [],
-}
+  variants: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/forms')],
+};
