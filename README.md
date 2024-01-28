@@ -66,5 +66,5 @@ For production mode, run:
 npm run build
 npm start
 ```
-
+![HomePage](https://pasteboard.co/CsKpRQ01H8yG.png)
 Visit http://localhost:3000 or your custom port environment variable to view the app.
