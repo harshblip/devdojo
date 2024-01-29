@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/34748469/133837934-3584c5a0-e650-46c1-a0c7-7125d30fd145.png" height="100" width="100" />
+  <img src="/public/polygon-token.png" height="100" width="100" />
 </p>
 <h1 align="center">DevDojo</h1>
 
@@ -15,11 +15,17 @@
   <img src="https://img.shields.io/badge/-Hetzner-D50C2D?style=flat-square&logo=hetzner&logoColor=white" />
   <img src="https://img.shields.io/badge/-Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white" />
  </p>
- 
-----
-<h3 align="center">Features</h3>
 
 <div align="center">
+   <img src = "https://img.shields.io/badge/time_taken-4mo-blue" />
+   <img src = "https://img.shields.io/badge/developers_involved-2-blue" />
+   <img src = "https://komarev.com/ghpvc/?username=harshblip&label=Project+Views" />
+</div>
+
+----
+<h3 align="left">Features</h3>
+
+<div align="left">
   <p>⚡ Server-side rendering with Next.js<br />
   🍪 Cookie-based authorization with JSON web tokens<br />
   📜 Infinite scrolling feed with React Query<br />
@@ -53,7 +59,7 @@ SENDER_EMAIL =
 
 Create a new file named `.env.local` with following configuration:
 ```
-NEXT_PUBLIC_BASE_URL = http://localhost:3000
+NEXT_PUBLIC_BASE_URL = http://localhost:4000
 ```
 
 For development mode, run:
@@ -66,10 +72,16 @@ For production mode, run:
 npm run build
 npm start
 ```
+## Screenshots of the website 😀🌟
+<div>
+    <img src="/images/homepage.png" width="500" height="300">
+    <img src="/images/dashboard.png" width="500" height="300">
+    <img src="/images/chat.jpg" width="1100" height="250">
+    <img src="/images/searchpage.png" width="500" height="300">
+    <img src="/images/profilepage.png" width="500" height="300">
+</div>
+
 <p>
   
-<img src="/images/homepage.png" width="500" height="300">
-<img src="/images/dashboard.png" width="500" height="300">
-<img src="/images/chat.jpg" width="1100" height="250">
+Visit ```http://localhost:3000``` or your custom port environment variable to view the app.
 </p>
-Visit http://localhost:3000 or your custom port environment variable to view the app.
