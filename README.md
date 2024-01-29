@@ -39,14 +39,14 @@
 ## Running Locally
 
 Clone this repository and install dependencies by running:
-```
+```bash
 npm install
 #or
 yarn install
 ```
 
 Create a new file named `config.env` with the following environment variables in the root of the project folder:
-```
+``` env
 PORT = 
 MONGO_URI = 
 JWT_SECRET = 
@@ -58,17 +58,17 @@ SENDER_EMAIL =
 ```
 
 Create a new file named `.env.local` with following configuration:
-```
+``` env
 NEXT_PUBLIC_BASE_URL = http://localhost:4000
 ```
 
 For development mode, run:
-```
+```bash
 npm run dev
 ```
 
 For production mode, run:
-```
+```bash
 npm run build
 npm start
 ```
