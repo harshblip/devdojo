@@ -73,6 +73,7 @@ npm run build
 npm start
 ```
 ## Screenshots of the website 😀🌟
+
 <div>
     <img src="/images/homepage.png" width="500" height="300">
     <img src="/images/dashboard.png" width="500" height="300">
